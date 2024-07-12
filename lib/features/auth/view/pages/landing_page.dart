@@ -4,7 +4,7 @@ import 'package:coffee_zone/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
 
 class LandingPage extends StatelessWidget {
-  static const routePath = '/';
+  static const routePath = '/landing';
 
   const LandingPage({super.key});
 

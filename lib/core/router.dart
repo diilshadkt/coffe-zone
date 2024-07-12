@@ -1,10 +1,11 @@
 import 'package:coffee_zone/features/auth/view/pages/landing_page.dart';
 import 'package:coffee_zone/features/auth/view/pages/login_page.dart';
 import 'package:coffee_zone/features/auth/view/pages/signup_page.dart';
+import 'package:coffee_zone/features/nav/pages/navigation_page.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
-  initialLocation: SignupPage.routePath,
+  initialLocation: LandingPage.routePath,
   routes: [
     GoRoute(
       path: LandingPage.routePath,
@@ -17,6 +18,10 @@ final router = GoRouter(
     GoRoute(
       path: SignupPage.routePath,
       builder: (context, state) => const SignupPage(),
+    ),
+    GoRoute(
+      path: SignupPage.routePath,
+      builder: (context, state) => const NavigationPage(),
     )
   ],
 );
