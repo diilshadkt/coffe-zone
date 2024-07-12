@@ -21,6 +21,9 @@ class LoginPage extends HookWidget {
     final emailController = useTextEditingController();
     final passwordController = useTextEditingController();
     final forgotEmailController = useTextEditingController();
+    final animationController = useAnimationController(
+      duration: const Duration(milliseconds: 500),
+    );
 
     final isLoadingState = useState(false);
 
@@ -73,6 +76,11 @@ class LoginPage extends HookWidget {
                       onPressed: () {
                         showBottomSheet(
                             context: context,
+                            elevation: 1,
+                            enableDrag: true,
+                            showDragHandle: true,
+                            // sheetAnimationStyle: AnimationStyle.noAnimation,
+                            transitionAnimationController: animationController,
                             builder: (context) {
                               return ForgotPasswordBottomSheetWidget(
                                   forgotEmailController: forgotEmailController,
