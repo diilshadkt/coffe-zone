@@ -3,5 +3,13 @@
     "landingTitle": "Manage your own Coffee",
     "landingMessage": "The home for all your products and orders. Manage them all in one place.",
     "loginBtnLabel": "Login",
-    "registerBtnLabel": "Signup"
+    "registerBtnLabel": "Signup",
+    "loginPageTitle": "Welcome Back",
+    "loginPageSubtitle": "Login to continue.",
+    "emailFieldLabel": "Email",
+    "passwordFieldLabel" :"Password",
+    "createAccountBtnLabel": "Create Accoount",
+    "forgotPasswordLink": "Forgot Password?",
+    "showPasswordLink": "Show",
+    "hidePasswordLink":"Hide"
 }

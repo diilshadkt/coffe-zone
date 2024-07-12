@@ -120,6 +120,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Signup'**
   String get registerBtnLabel;
+
+  /// No description provided for @loginPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Welcome Back'**
+  String get loginPageTitle;
+
+  /// No description provided for @loginPageSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Login to continue.'**
+  String get loginPageSubtitle;
+
+  /// No description provided for @emailFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get emailFieldLabel;
+
+  /// No description provided for @passwordFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get passwordFieldLabel;
+
+  /// No description provided for @createAccountBtnLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Accoount'**
+  String get createAccountBtnLabel;
+
+  /// No description provided for @forgotPasswordLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Forgot Password?'**
+  String get forgotPasswordLink;
+
+  /// No description provided for @showPasswordLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Show'**
+  String get showPasswordLink;
+
+  /// No description provided for @hidePasswordLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Hide'**
+  String get hidePasswordLink;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
