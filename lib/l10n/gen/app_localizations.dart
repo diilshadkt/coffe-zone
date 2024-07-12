@@ -168,6 +168,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Hide'**
   String get hidePasswordLink;
+
+  /// No description provided for @signupPageTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Get Started'**
+  String get signupPageTitle;
+
+  /// No description provided for @signupPageSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Register an account.'**
+  String get signupPageSubtitle;
+
+  /// No description provided for @confirmPasswordLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm Password'**
+  String get confirmPasswordLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

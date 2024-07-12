@@ -42,4 +42,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get hidePasswordLink => 'Hide';
+
+  @override
+  String get signupPageTitle => 'Get Started';
+
+  @override
+  String get signupPageSubtitle => 'Register an account.';
+
+  @override
+  String get confirmPasswordLabel => 'Confirm Password';
 }

@@ -11,5 +11,8 @@
     "createAccountBtnLabel": "Create Accoount",
     "forgotPasswordLink": "Forgot Password?",
     "showPasswordLink": "Show",
-    "hidePasswordLink":"Hide"
+    "hidePasswordLink":"Hide",
+    "signupPageTitle": "Get Started",
+    "signupPageSubtitle": "Register an account.",
+    "confirmPasswordLabel" :"Confirm Password"
 }
