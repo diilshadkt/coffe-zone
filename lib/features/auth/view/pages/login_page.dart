@@ -79,7 +79,6 @@ class LoginPage extends HookWidget {
                             elevation: 1,
                             enableDrag: true,
                             showDragHandle: true,
-                            // sheetAnimationStyle: AnimationStyle.noAnimation,
                             transitionAnimationController: animationController,
                             builder: (context) {
                               return ForgotPasswordBottomSheetWidget(

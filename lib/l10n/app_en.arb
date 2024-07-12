@@ -30,6 +30,10 @@
     "passwordResetSentMessage": "Password reset link is sent to your account",
     "cannotResetPasswordError": "Cannot reset your password. Try again",
     "ordersBottomNavItem": "Orders",
-    "productsBottomNavItem": "Products"
+    "productsBottomNavItem": "Products",
+    "addCategoryBottomSheetTitle": "Add New Category",
+    "renameCategoryBottomSheetTitle": "Rename This Category",
+    "deleteCategoryBottomSheetTitle": "Delete This Category",
+    "submitButtonLabel": "Submit"
 
 }

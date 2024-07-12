@@ -282,6 +282,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Products'**
   String get productsBottomNavItem;
+
+  /// No description provided for @addCategoryBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Add New Category'**
+  String get addCategoryBottomSheetTitle;
+
+  /// No description provided for @renameCategoryBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Rename This Category'**
+  String get renameCategoryBottomSheetTitle;
+
+  /// No description provided for @deleteCategoryBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete This Category'**
+  String get deleteCategoryBottomSheetTitle;
+
+  /// No description provided for @submitButtonLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Submit'**
+  String get submitButtonLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -99,4 +99,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get productsBottomNavItem => 'Products';
+
+  @override
+  String get addCategoryBottomSheetTitle => 'Add New Category';
+
+  @override
+  String get renameCategoryBottomSheetTitle => 'Rename This Category';
+
+  @override
+  String get deleteCategoryBottomSheetTitle => 'Delete This Category';
+
+  @override
+  String get submitButtonLabel => 'Submit';
 }
