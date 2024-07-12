@@ -270,6 +270,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Cannot reset your password. Try again'**
   String get cannotResetPasswordError;
+
+  /// No description provided for @ordersBottomNavItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Orders'**
+  String get ordersBottomNavItem;
+
+  /// No description provided for @productsBottomNavItem.
+  ///
+  /// In en, this message translates to:
+  /// **'Products'**
+  String get productsBottomNavItem;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

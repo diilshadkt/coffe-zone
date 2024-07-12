@@ -1,7 +1,7 @@
 import 'package:coffee_zone/core/dependencies.dart';
 import 'package:coffee_zone/core/router.dart';
 import 'package:coffee_zone/features/auth/view/pages/landing_page.dart';
-import 'package:coffee_zone/features/nav/pages/navigation_page.dart';
+import 'package:coffee_zone/features/nav/view/pages/navigation_page.dart';
 import 'package:coffee_zone/firebase_options.dart';
 import 'package:coffee_zone/l10n/gen/app_localizations.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -9,6 +9,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:go_router/go_router.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -19,7 +20,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const App());
+  runApp(const ProviderScope(child: App()));
 }
 
 class App extends HookWidget {

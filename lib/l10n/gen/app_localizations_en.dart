@@ -93,4 +93,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get cannotResetPasswordError => 'Cannot reset your password. Try again';
+
+  @override
+  String get ordersBottomNavItem => 'Orders';
+
+  @override
+  String get productsBottomNavItem => 'Products';
 }

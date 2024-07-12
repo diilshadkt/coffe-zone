@@ -28,6 +28,8 @@
     "cannotLoginError": "Cannot login. Try again",
     "cannotLogoutError": "Cannot logout. Try again",
     "passwordResetSentMessage": "Password reset link is sent to your account",
-    "cannotResetPasswordError": "Cannot reset your password. Try again"
+    "cannotResetPasswordError": "Cannot reset your password. Try again",
+    "ordersBottomNavItem": "Orders",
+    "productsBottomNavItem": "Products"
 
 }
