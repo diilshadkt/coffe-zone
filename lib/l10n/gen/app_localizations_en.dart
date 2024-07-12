@@ -51,4 +51,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get confirmPasswordLabel => 'Confirm Password';
+
+  @override
+  String get emailRequiredError => 'Email is required';
+
+  @override
+  String get passwordRequiredError => 'Password is required';
+
+  @override
+  String get passwordShortError => 'Password must have atleast 8 characters';
+
+  @override
+  String get confirmNotMatchError => 'Password do not match';
+
+  @override
+  String get invalidEmailError => 'Invalid email address';
+
+  @override
+  String get confirmRequiredError => 'Confirm password is required';
 }

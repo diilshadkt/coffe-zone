@@ -14,5 +14,11 @@
     "hidePasswordLink":"Hide",
     "signupPageTitle": "Get Started",
     "signupPageSubtitle": "Register an account.",
-    "confirmPasswordLabel" :"Confirm Password"
+    "confirmPasswordLabel" :"Confirm Password",
+    "emailRequiredError": "Email is required",
+    "passwordRequiredError": "Password is required",
+    "passwordShortError": "Password must have atleast 8 characters",
+    "confirmNotMatchError":"Password do not match",
+    "invalidEmailError": "Invalid email address",
+    "confirmRequiredError": "Confirm password is required"
 }

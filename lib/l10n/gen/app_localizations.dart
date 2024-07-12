@@ -186,6 +186,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Confirm Password'**
   String get confirmPasswordLabel;
+
+  /// No description provided for @emailRequiredError.
+  ///
+  /// In en, this message translates to:
+  /// **'Email is required'**
+  String get emailRequiredError;
+
+  /// No description provided for @passwordRequiredError.
+  ///
+  /// In en, this message translates to:
+  /// **'Password is required'**
+  String get passwordRequiredError;
+
+  /// No description provided for @passwordShortError.
+  ///
+  /// In en, this message translates to:
+  /// **'Password must have atleast 8 characters'**
+  String get passwordShortError;
+
+  /// No description provided for @confirmNotMatchError.
+  ///
+  /// In en, this message translates to:
+  /// **'Password do not match'**
+  String get confirmNotMatchError;
+
+  /// No description provided for @invalidEmailError.
+  ///
+  /// In en, this message translates to:
+  /// **'Invalid email address'**
+  String get invalidEmailError;
+
+  /// No description provided for @confirmRequiredError.
+  ///
+  /// In en, this message translates to:
+  /// **'Confirm password is required'**
+  String get confirmRequiredError;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -7,19 +7,25 @@ class TextFieldWidget extends HookWidget {
   final String? label;
   final String? hintText;
   final bool isObscure;
+  final String? Function(String?)? validator;
+  final TextEditingController? controller;
 
   const TextFieldWidget({
     super.key,
     this.hintText,
     this.label,
     this.isObscure = false,
+    this.validator,
+    this.controller,
   });
 
   @override
   Widget build(BuildContext context) {
     final isObscureState = useState(isObscure);
 
-    return TextField(
+    return TextFormField(
+      validator: validator,
+      controller: controller,
       obscureText: isObscureState.value,
       decoration: InputDecoration(
         border: OutlineInputBorder(

@@ -1,7 +1,10 @@
 import 'package:coffee_zone/core/extensions/localization_extension.dart';
 import 'package:coffee_zone/core/widgets/button_widget.dart';
+import 'package:coffee_zone/features/auth/view/pages/login_page.dart';
+import 'package:coffee_zone/features/auth/view/pages/signup_page.dart';
 import 'package:coffee_zone/gen/assets.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class LandingPage extends StatelessWidget {
   static const routePath = '/landing';
@@ -55,14 +58,18 @@ class LandingPage extends StatelessWidget {
                 children: [
                   ButtonWidget(
                     isDense: false,
-                    onPressed: () {},
+                    onPressed: () {
+                      context.go(LoginPage.routePath);
+                    },
                     child: Text(context.text.loginBtnLabel),
                   ),
                   const SizedBox(width: 16),
                   ButtonWidget(
                     isBold: false,
                     isDense: false,
-                    onPressed: () {},
+                    onPressed: () {
+                      context.go(SignupPage.routePath);
+                    },
                     child: Text(context.text.registerBtnLabel),
                   ),
                 ],
@@ -70,7 +77,7 @@ class LandingPage extends StatelessWidget {
               const SizedBox(height: 32),
             ],
           ),
-        ),
+        ), 
       ),
     );
   }
