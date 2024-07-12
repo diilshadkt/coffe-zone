@@ -1,8 +1,16 @@
 import 'package:coffee_zone/core/router.dart';
+import 'package:coffee_zone/firebase_options.dart';
 import 'package:coffee_zone/l10n/gen/app_localizations.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const App());
 }
 
