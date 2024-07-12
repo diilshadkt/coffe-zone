@@ -1,3 +1,7 @@
 {
-    "appName": "CoffeZone"
+    "appName": "CoffeZone",
+    "landingTitle": "Manage your own Coffee",
+    "landingMessage": "The home for all your products and orders. Manage them all in one place.",
+    "loginBtnLabel": "Login",
+    "registerBtnLabel": "Signup"
 }

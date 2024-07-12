@@ -6,4 +6,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appName => 'CoffeZone';
+
+  @override
+  String get landingTitle => 'Manage your own Coffee';
+
+  @override
+  String get landingMessage => 'The home for all your products and orders. Manage them all in one place.';
+
+  @override
+  String get loginBtnLabel => 'Login';
+
+  @override
+  String get registerBtnLabel => 'Signup';
 }

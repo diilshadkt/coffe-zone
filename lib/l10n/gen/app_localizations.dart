@@ -96,6 +96,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'CoffeZone'**
   String get appName;
+
+  /// No description provided for @landingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Manage your own Coffee'**
+  String get landingTitle;
+
+  /// No description provided for @landingMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'The home for all your products and orders. Manage them all in one place.'**
+  String get landingMessage;
+
+  /// No description provided for @loginBtnLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get loginBtnLabel;
+
+  /// No description provided for @registerBtnLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Signup'**
+  String get registerBtnLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
