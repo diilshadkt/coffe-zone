@@ -18,9 +18,10 @@ final class AuthController {
       await authServices.sendVerificationEmail();
 
       SnackbarUtils.showMessage(
-          'Verification email sent to the email address. Please check your mail.');
+          App.navigatorKey.currentContext!.text.verficationMailSentMessage);
     } catch (e) {
-      SnackbarUtils.showMessage('Cannot create account. Try again');
+      SnackbarUtils.showMessage(
+          App.navigatorKey.currentContext!.text.cannotSignupError);
     }
   }
 
@@ -30,10 +31,20 @@ final class AuthController {
 
       if (!FirebaseAuth.instance.currentUser!.emailVerified) {
         SnackbarUtils.showMessage(
-            'Your email is not verified. Please verify email to login.');
+            App.navigatorKey.currentContext!.text.emailNotVerified);
       }
     } catch (e) {
-      SnackbarUtils.showMessage('Cannot login. Try again');
+      SnackbarUtils.showMessage(
+          App.navigatorKey.currentContext!.text.cannotLoginError);
+    }
+  }
+
+  Future<void> logout() async {
+    try {
+      await authServices.logout();
+    } catch (e) {
+      SnackbarUtils.showMessage(
+          App.navigatorKey.currentContext!.text.cannotLogoutError);
     }
   }
 
@@ -41,12 +52,11 @@ final class AuthController {
     try {
       await authServices.sendPasswordResetEmail(email);
 
-      if (!FirebaseAuth.instance.currentUser!.emailVerified) {
-        SnackbarUtils.showMessage(
-            'Password reset link is sent to your account');
-      }
+      SnackbarUtils.showMessage(
+          App.navigatorKey.currentContext!.text.passwordResetSentMessage);
     } catch (e) {
-      SnackbarUtils.showMessage('Cannot reset your password. Try again');
+      SnackbarUtils.showMessage(
+          App.navigatorKey.currentContext!.text.cannotResetPasswordError);
     }
   }
 

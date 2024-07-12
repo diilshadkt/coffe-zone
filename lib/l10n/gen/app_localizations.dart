@@ -222,6 +222,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Confirm password is required'**
   String get confirmRequiredError;
+
+  /// No description provided for @sendResetEmailBtnLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Send reset email'**
+  String get sendResetEmailBtnLabel;
+
+  /// No description provided for @verficationMailSentMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Verification email sent to the email address. Please check your mail.'**
+  String get verficationMailSentMessage;
+
+  /// No description provided for @cannotSignupError.
+  ///
+  /// In en, this message translates to:
+  /// **'Cannot create account. Try again'**
+  String get cannotSignupError;
+
+  /// No description provided for @emailNotVerified.
+  ///
+  /// In en, this message translates to:
+  /// **'Your email is not verified. Please verify email to login.'**
+  String get emailNotVerified;
+
+  /// No description provided for @cannotLoginError.
+  ///
+  /// In en, this message translates to:
+  /// **'Cannot login. Try again'**
+  String get cannotLoginError;
+
+  /// No description provided for @cannotLogoutError.
+  ///
+  /// In en, this message translates to:
+  /// **'Cannot logout. Try again'**
+  String get cannotLogoutError;
+
+  /// No description provided for @passwordResetSentMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Password reset link is sent to your account'**
+  String get passwordResetSentMessage;
+
+  /// No description provided for @cannotResetPasswordError.
+  ///
+  /// In en, this message translates to:
+  /// **'Cannot reset your password. Try again'**
+  String get cannotResetPasswordError;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

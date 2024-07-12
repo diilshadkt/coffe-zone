@@ -20,5 +20,14 @@
     "passwordShortError": "Password must have atleast 8 characters",
     "confirmNotMatchError":"Password do not match",
     "invalidEmailError": "Invalid email address",
-    "confirmRequiredError": "Confirm password is required"
+    "confirmRequiredError": "Confirm password is required",
+    "sendResetEmailBtnLabel": "Send reset email",
+    "verficationMailSentMessage": "Verification email sent to the email address. Please check your mail.",
+    "cannotSignupError": "Cannot create account. Try again",
+    "emailNotVerified": "Your email is not verified. Please verify email to login.",
+    "cannotLoginError": "Cannot login. Try again",
+    "cannotLogoutError": "Cannot logout. Try again",
+    "passwordResetSentMessage": "Password reset link is sent to your account",
+    "cannotResetPasswordError": "Cannot reset your password. Try again"
+
 }

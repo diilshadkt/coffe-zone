@@ -1,3 +1,5 @@
+import 'package:coffee_zone/core/widgets/button_widget.dart';
+import 'package:coffee_zone/features/auth/controller/auth_controller.dart';
 import 'package:flutter/material.dart';
 
 class NavigationPage extends StatelessWidget {
@@ -7,6 +9,14 @@ class NavigationPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      body: Center(
+        child: ButtonWidget(
+            onPressed: () {
+              AuthController().logout();
+            },
+            child: const Text('LOGOUT')),
+      ),
+    );
   }
 }

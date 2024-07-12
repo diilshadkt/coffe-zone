@@ -69,4 +69,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get confirmRequiredError => 'Confirm password is required';
+
+  @override
+  String get sendResetEmailBtnLabel => 'Send reset email';
+
+  @override
+  String get verficationMailSentMessage => 'Verification email sent to the email address. Please check your mail.';
+
+  @override
+  String get cannotSignupError => 'Cannot create account. Try again';
+
+  @override
+  String get emailNotVerified => 'Your email is not verified. Please verify email to login.';
+
+  @override
+  String get cannotLoginError => 'Cannot login. Try again';
+
+  @override
+  String get cannotLogoutError => 'Cannot logout. Try again';
+
+  @override
+  String get passwordResetSentMessage => 'Password reset link is sent to your account';
+
+  @override
+  String get cannotResetPasswordError => 'Cannot reset your password. Try again';
 }

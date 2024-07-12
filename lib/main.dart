@@ -15,7 +15,7 @@ void main() async {
 
   DependencyInjection.registerDependencies();
 
-  Firebase.initializeApp(
+  await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
