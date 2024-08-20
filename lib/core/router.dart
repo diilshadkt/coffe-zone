@@ -4,6 +4,7 @@ import 'package:coffee_zone/features/auth/view/pages/signup_page.dart';
 import 'package:coffee_zone/features/nav/view/pages/navigation_page.dart';
 import 'package:coffee_zone/features/order/view/pages/orders_list_page.dart';
 import 'package:coffee_zone/features/product/view/pages/product_list_page.dart';
+import 'package:coffee_zone/features/product/view/pages/products_add_page.dart';
 import 'package:coffee_zone/main.dart';
 import 'package:go_router/go_router.dart';
 
@@ -34,6 +35,10 @@ final router = GoRouter(
     GoRoute(
       path: OrdersListPage.routePath,
       builder: (context, state) => const OrdersListPage(),
+    ),
+     GoRoute(
+      path: ProductsAddPage.routePath,
+      builder: (context, state) => const ProductsAddPage(),
     )
   ],
 );

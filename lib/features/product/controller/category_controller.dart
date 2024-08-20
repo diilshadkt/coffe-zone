@@ -29,6 +29,8 @@ class CategoryController extends _$CategoryController {
   }
 
   Future<void> deleteCategory() async {
+
+    
     if (state.allCategories.length > 1) {
       state = state.copyWith(
           allCategories: [...state.allCategories]

@@ -1,10 +1,12 @@
 import 'package:coffee_zone/core/extensions/localization_extension.dart';
+import 'package:coffee_zone/core/extensions/theme_extension.dart';
 import 'package:coffee_zone/features/product/controller/category_controller.dart';
+import 'package:coffee_zone/features/product/view/pages/products_add_page.dart';
 import 'package:coffee_zone/features/product/view/widgets/add_catogary_bottom_sheet_widget.dart';
-import 'package:coffee_zone/features/product/view/widgets/delete_category_bottom_sheet_widget.dart';
 import 'package:coffee_zone/features/product/view/widgets/rename_category_bottom_sheet_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ProductListPage extends HookConsumerWidget {
@@ -17,7 +19,6 @@ class ProductListPage extends HookConsumerWidget {
     final categoriesState = ref.watch(categoryControllerProvider);
     final addCategoryController = useTextEditingController();
     final renameCategoryController = useTextEditingController();
-    final deleteCategoryController = useTextEditingController();
     final animationController = useAnimationController(
       duration: const Duration(milliseconds: 500),
     );
@@ -65,17 +66,26 @@ class ProductListPage extends HookConsumerWidget {
                         });
                     break;
                   case 3:
-                    showBottomSheet(
-                        context: context,
-                        elevation: 1,
-                        enableDrag: true,
-                        showDragHandle: true,
-                        transitionAnimationController: animationController,
-                        builder: (context) {
-                          return DeleetCatogaryBottomSheetWidget(
-                              deleteCatogaryController:
-                                  deleteCategoryController);
-                        });
+                    showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                        content: const Text("Are you confirm to delete?"),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () => context.pop(),
+                            child: const Text('Cancel'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                              ref
+                                  .read(categoryControllerProvider.notifier)
+                                  .deleteCategory();
+                            },
+                            child: const Text('OK'),
+                          ),
+                        ],
+                      ),
+                    );
                 }
               },
               icon: const Icon(Icons.more_vert),
@@ -93,9 +103,16 @@ class ProductListPage extends HookConsumerWidget {
                   child: Text('Delete this category'),
                 ),
               ],
-            )
+            ),
           ],
         ),
+        floatingActionButton: FloatingActionButton(
+            backgroundColor: context.colors.primary,
+            foregroundColor: Colors.white,
+            child: const Icon(Icons.add),
+            onPressed: () {
+              context.go(ProductsAddPage.routePath);
+            }),
       ),
     );
   }
