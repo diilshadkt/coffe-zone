@@ -21,13 +21,14 @@ class CategoryFirestoreService {
   Future<void> update(CategoryModel updatedModel) async {
     await categoryDb.doc(updatedModel.id).set(updatedModel);
   }
-
-  Stream<List<CategoryModel>> getAll() async* {
-    final categoryStream = categoryDb.snapshots(includeMetadataChanges: true);
-    await for (final categories in categoryStream) {
-      yield [
-        for (final category in categories.docs) category.data(),
-      ];
-    }
-  }
 }
+
+//   Stream<List<CategoryModel>> getAll() async* {
+//     final categoryStream = categoryDb.snapshots(includeMetadataChanges: true);
+//     await for (final categories in categoryStream) {
+//       yield [
+//         for (final category in categories.docs) category.data(),
+//       ];
+//     }
+//   }
+// }

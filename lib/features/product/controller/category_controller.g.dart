@@ -23,7 +23,7 @@ final getAllCategoryProvider =
 
 typedef GetAllCategoryRef = AutoDisposeStreamProviderRef<List<CategoryModel>>;
 String _$categoryControllerHash() =>
-    r'87de3a214463dad6456c5e1a977fb4a410b8b1cc';
+    r'76089d7b4a568e335f3043846094202eef4d59f0';
 
 /// See also [CategoryController].
 @ProviderFor(CategoryController)
