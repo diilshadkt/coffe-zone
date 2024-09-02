@@ -17,7 +17,6 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$CategoryControllerState {
   int get selectedCategory => throw _privateConstructorUsedError;
-  List<String> get allCategories => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CategoryControllerStateCopyWith<CategoryControllerState> get copyWith =>
@@ -30,7 +29,7 @@ abstract class $CategoryControllerStateCopyWith<$Res> {
           $Res Function(CategoryControllerState) then) =
       _$CategoryControllerStateCopyWithImpl<$Res, CategoryControllerState>;
   @useResult
-  $Res call({int selectedCategory, List<String> allCategories});
+  $Res call({int selectedCategory});
 }
 
 /// @nodoc
@@ -48,17 +47,12 @@ class _$CategoryControllerStateCopyWithImpl<$Res,
   @override
   $Res call({
     Object? selectedCategory = null,
-    Object? allCategories = null,
   }) {
     return _then(_value.copyWith(
       selectedCategory: null == selectedCategory
           ? _value.selectedCategory
           : selectedCategory // ignore: cast_nullable_to_non_nullable
               as int,
-      allCategories: null == allCategories
-          ? _value.allCategories
-          : allCategories // ignore: cast_nullable_to_non_nullable
-              as List<String>,
     ) as $Val);
   }
 }
@@ -72,7 +66,7 @@ abstract class _$$CategoryControllerStateImplCopyWith<$Res>
       __$$CategoryControllerStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int selectedCategory, List<String> allCategories});
+  $Res call({int selectedCategory});
 }
 
 /// @nodoc
@@ -89,17 +83,12 @@ class __$$CategoryControllerStateImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? selectedCategory = null,
-    Object? allCategories = null,
   }) {
     return _then(_$CategoryControllerStateImpl(
       selectedCategory: null == selectedCategory
           ? _value.selectedCategory
           : selectedCategory // ignore: cast_nullable_to_non_nullable
               as int,
-      allCategories: null == allCategories
-          ? _value._allCategories
-          : allCategories // ignore: cast_nullable_to_non_nullable
-              as List<String>,
     ));
   }
 }
@@ -107,24 +96,14 @@ class __$$CategoryControllerStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$CategoryControllerStateImpl implements _CategoryControllerState {
-  _$CategoryControllerStateImpl(
-      {required this.selectedCategory,
-      required final List<String> allCategories})
-      : _allCategories = allCategories;
+  _$CategoryControllerStateImpl({required this.selectedCategory});
 
   @override
   final int selectedCategory;
-  final List<String> _allCategories;
-  @override
-  List<String> get allCategories {
-    if (_allCategories is EqualUnmodifiableListView) return _allCategories;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_allCategories);
-  }
 
   @override
   String toString() {
-    return 'CategoryControllerState(selectedCategory: $selectedCategory, allCategories: $allCategories)';
+    return 'CategoryControllerState(selectedCategory: $selectedCategory)';
   }
 
   @override
@@ -133,14 +112,11 @@ class _$CategoryControllerStateImpl implements _CategoryControllerState {
         (other.runtimeType == runtimeType &&
             other is _$CategoryControllerStateImpl &&
             (identical(other.selectedCategory, selectedCategory) ||
-                other.selectedCategory == selectedCategory) &&
-            const DeepCollectionEquality()
-                .equals(other._allCategories, _allCategories));
+                other.selectedCategory == selectedCategory));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, selectedCategory,
-      const DeepCollectionEquality().hash(_allCategories));
+  int get hashCode => Object.hash(runtimeType, selectedCategory);
 
   @JsonKey(ignore: true)
   @override
@@ -151,15 +127,11 @@ class _$CategoryControllerStateImpl implements _CategoryControllerState {
 }
 
 abstract class _CategoryControllerState implements CategoryControllerState {
-  factory _CategoryControllerState(
-          {required final int selectedCategory,
-          required final List<String> allCategories}) =
+  factory _CategoryControllerState({required final int selectedCategory}) =
       _$CategoryControllerStateImpl;
 
   @override
   int get selectedCategory;
-  @override
-  List<String> get allCategories;
   @override
   @JsonKey(ignore: true)
   _$$CategoryControllerStateImplCopyWith<_$CategoryControllerStateImpl>

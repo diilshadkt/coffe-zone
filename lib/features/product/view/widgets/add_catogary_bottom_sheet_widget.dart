@@ -42,6 +42,7 @@ class AddCatogaryBottomSheetWidget extends ConsumerWidget {
                       ref
                           .read(categoryControllerProvider.notifier)
                           .addNewCategory(addCatogaryController.text);
+                      addCatogaryController.clear();
                     },
                     child: Text(context.text.addCategoryBottomSheetTitle)))
           ],

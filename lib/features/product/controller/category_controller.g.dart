@@ -6,8 +6,24 @@ part of 'category_controller.dart';
 // RiverpodGenerator
 // **************************************************************************
 
+String _$getAllCategoryHash() => r'71bcaad47c74172a58e3ac363dae437ca0990e07';
+
+/// See also [getAllCategory].
+@ProviderFor(getAllCategory)
+final getAllCategoryProvider =
+    AutoDisposeStreamProvider<List<CategoryModel>>.internal(
+  getAllCategory,
+  name: r'getAllCategoryProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$getAllCategoryHash,
+  dependencies: null,
+  allTransitiveDependencies: null,
+);
+
+typedef GetAllCategoryRef = AutoDisposeStreamProviderRef<List<CategoryModel>>;
 String _$categoryControllerHash() =>
-    r'60066496a6060ce829557ec9a2a5f37e2d2fd35e';
+    r'87de3a214463dad6456c5e1a977fb4a410b8b1cc';
 
 /// See also [CategoryController].
 @ProviderFor(CategoryController)
