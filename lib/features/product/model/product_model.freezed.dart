@@ -21,7 +21,13 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ProductModel {
   String get id => throw _privateConstructorUsedError;
+  String get imagePath => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  String get description => throw _privateConstructorUsedError;
+  String get categoryId => throw _privateConstructorUsedError;
+  List<ProductTypeModel> get types => throw _privateConstructorUsedError;
+  String get availableFrom => throw _privateConstructorUsedError;
+  String get availableUpTo => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +41,15 @@ abstract class $ProductModelCopyWith<$Res> {
           ProductModel value, $Res Function(ProductModel) then) =
       _$ProductModelCopyWithImpl<$Res, ProductModel>;
   @useResult
-  $Res call({String id, String name});
+  $Res call(
+      {String id,
+      String imagePath,
+      String name,
+      String description,
+      String categoryId,
+      List<ProductTypeModel> types,
+      String availableFrom,
+      String availableUpTo});
 }
 
 /// @nodoc
@@ -52,16 +66,46 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
   @override
   $Res call({
     Object? id = null,
+    Object? imagePath = null,
     Object? name = null,
+    Object? description = null,
+    Object? categoryId = null,
+    Object? types = null,
+    Object? availableFrom = null,
+    Object? availableUpTo = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      imagePath: null == imagePath
+          ? _value.imagePath
+          : imagePath // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      categoryId: null == categoryId
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as String,
+      types: null == types
+          ? _value.types
+          : types // ignore: cast_nullable_to_non_nullable
+              as List<ProductTypeModel>,
+      availableFrom: null == availableFrom
+          ? _value.availableFrom
+          : availableFrom // ignore: cast_nullable_to_non_nullable
+              as String,
+      availableUpTo: null == availableUpTo
+          ? _value.availableUpTo
+          : availableUpTo // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -75,7 +119,15 @@ abstract class _$$ProductModelImplCopyWith<$Res>
       __$$ProductModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String id, String name});
+  $Res call(
+      {String id,
+      String imagePath,
+      String name,
+      String description,
+      String categoryId,
+      List<ProductTypeModel> types,
+      String availableFrom,
+      String availableUpTo});
 }
 
 /// @nodoc
@@ -90,16 +142,46 @@ class __$$ProductModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
+    Object? imagePath = null,
     Object? name = null,
+    Object? description = null,
+    Object? categoryId = null,
+    Object? types = null,
+    Object? availableFrom = null,
+    Object? availableUpTo = null,
   }) {
     return _then(_$ProductModelImpl(
       id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
+      imagePath: null == imagePath
+          ? _value.imagePath
+          : imagePath // ignore: cast_nullable_to_non_nullable
+              as String,
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      description: null == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String,
+      categoryId: null == categoryId
+          ? _value.categoryId
+          : categoryId // ignore: cast_nullable_to_non_nullable
+              as String,
+      types: null == types
+          ? _value._types
+          : types // ignore: cast_nullable_to_non_nullable
+              as List<ProductTypeModel>,
+      availableFrom: null == availableFrom
+          ? _value.availableFrom
+          : availableFrom // ignore: cast_nullable_to_non_nullable
+              as String,
+      availableUpTo: null == availableUpTo
+          ? _value.availableUpTo
+          : availableUpTo // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -108,7 +190,17 @@ class __$$ProductModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ProductModelImpl extends _ProductModel {
-  _$ProductModelImpl({required this.id, required this.name}) : super._();
+  _$ProductModelImpl(
+      {required this.id,
+      required this.imagePath,
+      required this.name,
+      required this.description,
+      required this.categoryId,
+      required final List<ProductTypeModel> types,
+      required this.availableFrom,
+      required this.availableUpTo})
+      : _types = types,
+        super._();
 
   factory _$ProductModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductModelImplFromJson(json);
@@ -116,11 +208,29 @@ class _$ProductModelImpl extends _ProductModel {
   @override
   final String id;
   @override
+  final String imagePath;
+  @override
   final String name;
+  @override
+  final String description;
+  @override
+  final String categoryId;
+  final List<ProductTypeModel> _types;
+  @override
+  List<ProductTypeModel> get types {
+    if (_types is EqualUnmodifiableListView) return _types;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_types);
+  }
+
+  @override
+  final String availableFrom;
+  @override
+  final String availableUpTo;
 
   @override
   String toString() {
-    return 'ProductModel(id: $id, name: $name)';
+    return 'ProductModel(id: $id, imagePath: $imagePath, name: $name, description: $description, categoryId: $categoryId, types: $types, availableFrom: $availableFrom, availableUpTo: $availableUpTo)';
   }
 
   @override
@@ -129,12 +239,32 @@ class _$ProductModelImpl extends _ProductModel {
         (other.runtimeType == runtimeType &&
             other is _$ProductModelImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.name, name) || other.name == name));
+            (identical(other.imagePath, imagePath) ||
+                other.imagePath == imagePath) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.description, description) ||
+                other.description == description) &&
+            (identical(other.categoryId, categoryId) ||
+                other.categoryId == categoryId) &&
+            const DeepCollectionEquality().equals(other._types, _types) &&
+            (identical(other.availableFrom, availableFrom) ||
+                other.availableFrom == availableFrom) &&
+            (identical(other.availableUpTo, availableUpTo) ||
+                other.availableUpTo == availableUpTo));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, name);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      imagePath,
+      name,
+      description,
+      categoryId,
+      const DeepCollectionEquality().hash(_types),
+      availableFrom,
+      availableUpTo);
 
   @JsonKey(ignore: true)
   @override
@@ -153,7 +283,13 @@ class _$ProductModelImpl extends _ProductModel {
 abstract class _ProductModel extends ProductModel {
   factory _ProductModel(
       {required final String id,
-      required final String name}) = _$ProductModelImpl;
+      required final String imagePath,
+      required final String name,
+      required final String description,
+      required final String categoryId,
+      required final List<ProductTypeModel> types,
+      required final String availableFrom,
+      required final String availableUpTo}) = _$ProductModelImpl;
   _ProductModel._() : super._();
 
   factory _ProductModel.fromJson(Map<String, dynamic> json) =
@@ -162,7 +298,19 @@ abstract class _ProductModel extends ProductModel {
   @override
   String get id;
   @override
+  String get imagePath;
+  @override
   String get name;
+  @override
+  String get description;
+  @override
+  String get categoryId;
+  @override
+  List<ProductTypeModel> get types;
+  @override
+  String get availableFrom;
+  @override
+  String get availableUpTo;
   @override
   @JsonKey(ignore: true)
   _$$ProductModelImplCopyWith<_$ProductModelImpl> get copyWith =>
