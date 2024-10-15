@@ -31,3 +31,19 @@ Future<void> addNewProduct(ProductModel model) async {
       availableFrom: model.availableFrom,
       availableUpTo: model.availableUpTo));
 }
+
+Future<void> deleteProduct(String id) async {
+  ProductFirestoreService().delete(id);
+}
+
+Future<void> updateProduct(ProductModel updateModel) async {
+  ProductFirestoreService().update(ProductModel(
+      id: "",
+      imagePath: "",
+      name: updateModel.name,
+      description: updateModel.description,
+      categoryId: updateModel.categoryId,
+      types: updateModel.types,
+      availableFrom: updateModel.availableFrom,
+      availableUpTo: updateModel.availableUpTo));
+}
