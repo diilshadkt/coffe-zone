@@ -9,7 +9,7 @@ class ProductModel with _$ProductModel {
   const ProductModel._();
 
   factory ProductModel({
-     required String id,
+    required String id,
     required String imagePath,
     required String name,
     required String description,

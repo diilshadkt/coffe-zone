@@ -4,7 +4,6 @@ import 'package:coffee_zone/features/product/model/category_model.dart';
 import 'package:coffee_zone/features/product/services/category_firestore_service.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-
 part 'category_controller.freezed.dart';
 part 'category_controller.g.dart';
 
@@ -39,7 +38,8 @@ class CategoryController extends _$CategoryController {
     return CategoryControllerState(
       selectedCategory: 0,
     );
-  }
+  } 
+
 
   Future<void> addNewCategory(String categoryName) async {
     CategoryFirestoreService().add(CategoryModel(id: '', name: categoryName));
