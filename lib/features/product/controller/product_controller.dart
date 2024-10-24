@@ -1,6 +1,9 @@
+import 'dart:io';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:coffee_zone/features/product/model/product_model.dart';
 import 'package:coffee_zone/features/product/services/product_firestore_service.dart';
+import 'package:coffee_zone/features/product/services/product_storage_firebase_service.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'product_controller.g.dart';
 
@@ -46,4 +49,12 @@ Future<void> updateProduct(ProductModel updateModel) async {
       types: updateModel.types,
       availableFrom: updateModel.availableFrom,
       availableUpTo: updateModel.availableUpTo));
+}
+
+Future<String> uploadProductImage(File fileUpload, String filePath) {
+  return ProductStorageFirebaseService().add(fileUpload, filePath);
+}
+
+Future<void> deleteProductimage(String filePath)async{
+  await ProductStorageFirebaseService().delete(filePath);
 }
